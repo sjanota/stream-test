@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transformer
+spec:
+  template:
+    spec:
+      containers:
+        - image: 127.0.0.1:5000/transformer:local
+          name: main

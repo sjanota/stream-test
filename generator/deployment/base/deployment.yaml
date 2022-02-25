@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: stream-test
+  name: generator
 spec:
   template:
     spec:
       containers:
-        - name: main
-          imagePullPolicy: Always
+        - image: 127.0.0.1:5000/generator:local
+          name: main

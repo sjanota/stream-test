@@ -1,4 +1,6 @@
-.PHONY: image
-image:
-	docker build . -t 127.0.0.1:5000/stream-test:local
-	docker push 127.0.0.1:5000/stream-test:local
+.PHONY: install
+install:
+	-kubectl create ns stream-test
+	cd sink && $(MAKE) 
+	cd transformer && $(MAKE) 
+	cd generator && $(MAKE) 

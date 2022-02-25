@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../base
+
+replicas:
+- name: sink
+  count: 1
+
+patches:
+- path: image-pull-policy-always.patch.yaml
+
