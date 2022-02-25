@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "moduleResolution": "node",
+        "module": "esnext"
+    },
+    "include": ["src/**/*"]
+}
